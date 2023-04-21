@@ -50,6 +50,13 @@ public class SkillsController {
     @PostMapping(value="form")
     @ResponseBody
     public String namePage(@RequestParam String name, @RequestParam String firstChoice, @RequestParam String secondChoice, @RequestParam String thirdChoice){
+        String html = "<h1>" + name + "</h1>" +
+                "<ol>" +
+                "<li>" + firstChoice + "</li>" +
+                "<li>" + secondChoice + "</li>" +
+                "<li>" + thirdChoice + "</li>" +
+                "</ol>";
 
+        return html;
     }
 }
